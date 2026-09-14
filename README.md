@@ -8,8 +8,12 @@ read and adapted, not just installed.
 | Skill | What it does |
 |---|---|
 | [`pr-review-audit`](skills/pr-review-audit/SKILL.md) | Reviews a PR diff for authorization gaps, swallowed errors, N+1 queries, contract breaks, and missing test coverage |
-| [`git-commit-convention`](skills/git-commit-convention/SKILL.md) | Writes a Conventional Commits message from a staged diff and reports the resulting semver bump |
+| [`test-coverage-audit`](skills/test-coverage-audit/SKILL.md) | Finds behaviour in a diff that no test exercises — including paths that run but are never asserted — and writes the missing cases |
 | [`db-migration-check`](skills/db-migration-check/SKILL.md) | Audits a migration for table locks, backward-incompatible changes, and unsafe backfills, and rewrites it |
+| [`api-contract-review`](skills/api-contract-review/SKILL.md) | Checks a REST or GraphQL change for breaking field, type, nullability, and enum changes, and gives an additive migration path |
+| [`refactor-safety-net`](skills/refactor-safety-net/SKILL.md) | Writes characterization tests that pin current behaviour — bugs included — before you change code you don't fully understand |
+| [`git-commit-convention`](skills/git-commit-convention/SKILL.md) | Writes a Conventional Commits message from a staged diff and reports the resulting semver bump |
+| [`incident-postmortem`](skills/incident-postmortem/SKILL.md) | Drafts a blameless postmortem that separates trigger from root cause and produces owned, verifiable action items |
 
 ## Install
 
@@ -56,12 +60,13 @@ claude "check this migration for anything that will lock the orders table"
 
 ```
 skills/
-  pr-review-audit/
-    SKILL.md
-  git-commit-convention/
-    SKILL.md
-  db-migration-check/
-    SKILL.md
+  api-contract-review/SKILL.md
+  db-migration-check/SKILL.md
+  git-commit-convention/SKILL.md
+  incident-postmortem/SKILL.md
+  pr-review-audit/SKILL.md
+  refactor-safety-net/SKILL.md
+  test-coverage-audit/SKILL.md
 ```
 
 Every `SKILL.md` carries YAML frontmatter with a `name` and a `description`
