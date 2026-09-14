@@ -107,9 +107,9 @@ Free, browser-based utilities for authoring and maintaining skills:
 
 ## Contributing
 
-Issues and pull requests are welcome. A new skill should include all seven
-sections listed above, and the worked example should come from a real case
-rather than an invented one.
+Issues and pull requests are welcome. See [CONTRIBUTING.md](CONTRIBUTING.md)
+for the seven required sections, the frontmatter validator, and how to verify
+a skill actually fires before opening a PR.
 
 ## License
 
